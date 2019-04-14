@@ -60,6 +60,8 @@
     <Compile Include="Analyzer\Functions\Cos.cs" />
     <Compile Include="Analyzer\Functions\CoSec.cs" />
     <Compile Include="Analyzer\Functions\CTG.cs" />
+    <Compile Include="Analyzer\Functions\LOG10.cs" />
+    <Compile Include="Analyzer\Functions\LogE.cs" />
     <Compile Include="Analyzer\Functions\Sec.cs" />
     <Compile Include="Analyzer\Functions\Sin.cs" />
     <Compile Include="Analyzer\Functions\Sqrt.cs" />

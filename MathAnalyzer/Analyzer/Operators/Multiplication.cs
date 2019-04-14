@@ -1,7 +1,9 @@
 ﻿using Analyzer.Classes;
+using System;
 
 namespace Analyzer.Operators
 {
+    [Serializable]
     class Multiplication : ClassOperator
     {
         public override string Name { get; } = "*";

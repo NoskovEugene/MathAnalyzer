@@ -6,6 +6,7 @@ namespace Analyzer.Classes
     /// <summary>
     /// Function element
     /// </summary>
+    [Serializable]
     abstract class ClassFunction : IElement
     {
         public abstract string Name { get; }

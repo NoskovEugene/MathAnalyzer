@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Analyzer.Classes
 {
@@ -6,6 +7,7 @@ namespace Analyzer.Classes
     /// <summary>
     /// Open bracket
     /// </summary>
+    [Serializable]
     class OpenBracket : IElement
     {
         public string Name => "(";

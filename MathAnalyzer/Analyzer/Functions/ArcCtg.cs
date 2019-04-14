@@ -6,6 +6,7 @@ using Analyzer.Classes;
 
 namespace Analyzer.Functions
 {
+    [Serializable]
     class ArcCtg : ClassFunction
     {
         public override string Name => "ARCCTG";

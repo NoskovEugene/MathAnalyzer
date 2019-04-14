@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Analyzer;
 using PolishNotation;
 using Calculator;
+using Analyzer.Functions;
+using Analyzer.Classes;
 
 namespace MathAnalyzer
 {
@@ -15,22 +17,13 @@ namespace MathAnalyzer
         {
             _Analyzer _Analyzer = new _Analyzer();
             RevercePolishNotation notation = new RevercePolishNotation();
-            while (true)
-            {
-                List<IElement> elements = _Analyzer.Analyze(Console.ReadLine());
-                Console.WriteLine("Source:");
-                Show(elements, 0);
-                Console.WriteLine("\r\n");
-                Console.WriteLine("Reverce notation:");
-                elements = notation.GetNotation(elements);
-                Show(elements, 0);
-                Console.WriteLine("\r\nAnswer");
-                Console.WriteLine(new Calculator.Calculator().Calc(elements));
-                Console.WriteLine("press any key");
-                Console.ReadKey();
-            }
-
-
+            List<IElement> elements = new List<IElement>();
+            elements = _Analyzer.Analyze(Console.ReadLine());
+            Show(elements,0);
+            elements = notation.GetNotation(elements);
+            Show(elements, 0);
+            Console.WriteLine(new Calculator.Calculator().Calc(elements, 1));
+            Console.ReadKey();
         }
 
         public static void Show(List<IElement> elements, int index)
@@ -46,7 +39,7 @@ namespace MathAnalyzer
                 if (element.Type == ElementType.Function)
                 {
                     Console.WriteLine($"{Pre} {element.Name} : {element.Type}");
-                    Show(element.Context, index = index + 1);
+                    Show(element.Context, index + 1);
                 }
                 else
                 {

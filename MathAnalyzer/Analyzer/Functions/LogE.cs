@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Analyzer.Classes;
-
 namespace Analyzer.Functions
 {
-    [Serializable]
-    class Sqrt : ClassFunction
+    class LogE : ClassFunction
     {
-        public override string Name => "SQRT";
+        public override string Name => "LOG";
 
         public override double Value { get; set; }
         public override List<IElement> Context { get; set; }
@@ -18,7 +17,7 @@ namespace Analyzer.Functions
 
         public override double Invoke(double X, double b = 0)
         {
-            this.Value = Math.Sqrt(base.Analyse(X));
+            this.Value = Math.Log(base.Analyse(X));
             return this.Value;
         }
     }

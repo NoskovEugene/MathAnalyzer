@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Analyzer.Classes
 {
     /// <summary>
     /// Variable element
     /// </summary>
+    [Serializable]
     class VariableElement : IElement
     {
         public string Name => "X";

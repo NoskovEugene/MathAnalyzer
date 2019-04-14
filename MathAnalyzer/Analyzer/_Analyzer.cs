@@ -96,7 +96,7 @@ namespace Analyzer
                     Context = AlignBrackets(Context);
                     if (functions.Contains(NameFunction))
                     {
-                        IElement element = functions.Function;
+                        ClassFunction element = functions.Function;
                         element.Context = Analyze(Context);
                         elements.Add(element);
                     }
