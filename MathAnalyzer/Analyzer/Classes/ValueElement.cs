@@ -1,8 +1,11 @@
-﻿namespace Analyzer.Classes
+﻿using System;
+
+namespace Analyzer.Classes
 {
     /// <summary>
     /// Numeric element
     /// </summary>
+    [Serializable]
     class ValueElement : ClassValue
     {
         public override string Name { get; protected set; }

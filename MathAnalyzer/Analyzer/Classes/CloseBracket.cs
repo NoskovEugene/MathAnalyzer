@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Analyzer.Classes
 {
     /// <summary>
     /// Close bracket
     /// </summary>
+    [Serializable]
     class CloseBracket : IElement
     {
         public string Name { get; } = ")";

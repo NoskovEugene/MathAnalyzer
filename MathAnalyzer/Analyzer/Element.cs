@@ -9,6 +9,7 @@ namespace Analyzer
     /// <summary>
     /// Types elements
     /// </summary>
+    [Serializable]
     enum ElementType
     {
         Null = 0,

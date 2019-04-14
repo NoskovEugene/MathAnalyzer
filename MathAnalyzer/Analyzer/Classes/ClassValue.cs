@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Analyzer.Classes
 {
     /// <summary>
     /// Abstract numeric element
     /// </summary>
+    [Serializable]
     abstract class ClassValue : IElement
     {
         public abstract string Name { get; protected set; }

@@ -2,17 +2,19 @@
 using Analyzer;
 using Analyzer.Operators;
 using Analyzer.Classes;
+using System;
 
 namespace Analyzer.Factories
 {
     /// <summary>
     /// Factory operator. Find operator at name
     /// </summary>
+    [Serializable]
     class FactoryOperators
     {
         public IElement Operator { get; private set; }
 
-        readonly List<ClassOperator> Operators = new List<ClassOperator>()
+        public List<ClassOperator> Operators = new List<ClassOperator>()
         {
             new Multiplication(),
             new Division(),

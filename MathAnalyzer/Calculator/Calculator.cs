@@ -8,6 +8,7 @@ using Analyzer.Classes;
 
 namespace Calculator
 {
+    [Serializable]
     class Calculator
     {
         public double Calc(List<IElement> PolExpression, double X = double.NaN)

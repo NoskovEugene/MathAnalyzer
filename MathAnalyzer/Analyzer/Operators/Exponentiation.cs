@@ -3,6 +3,7 @@ using Analyzer.Classes;
 
 namespace Analyzer.Operators
 {
+    [Serializable]
     class Exponentiation : ClassOperator
     {
         public override string Name => "^";

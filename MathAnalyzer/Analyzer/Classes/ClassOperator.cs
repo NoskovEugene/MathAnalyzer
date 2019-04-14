@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Analyzer.Classes
 {
     /// <summary>
     /// Operator element
     /// </summary>
+    [Serializable]
     abstract class ClassOperator : IElement
     {
         public abstract string Name { get; }

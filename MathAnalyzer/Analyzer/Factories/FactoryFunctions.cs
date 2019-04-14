@@ -10,11 +10,12 @@ namespace Analyzer.Factories
     /// <summary>
     /// Factory function. Find function at name
     /// </summary>
+    [Serializable]
     class FactoryFunctions
     {
-        public IElement Function { get; private set; }
+        public ClassFunction Function { get; private set; }
 
-        readonly List<ClassFunction> Operators = new List<ClassFunction>()
+        public List<ClassFunction> Operators = new List<ClassFunction>()
         {
             new Sin(),
             new ArcSin(),
@@ -26,7 +27,9 @@ namespace Analyzer.Factories
             new ArcCtg(),
             new Sqrt(),
             new Sec(),
-            new CoSec()
+            new CoSec(),
+            new LogE(),
+            new Log10()
         };
 
         public bool Contains(string Input)
@@ -35,7 +38,8 @@ namespace Analyzer.Factories
             {
                 if (Input.Equals(item.Name, StringComparison.OrdinalIgnoreCase))
                 {
-                    Function = item;
+                    Type extention = item.GetType();
+                    Function = (ClassFunction)Activator.CreateInstance(extention);
                     return true;
                 }
             }

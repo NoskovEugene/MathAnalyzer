@@ -1,7 +1,9 @@
 ﻿using Analyzer.Classes;
+using System;
 
 namespace Analyzer.Operators
 {
+    [Serializable]
     class Addition : ClassOperator
     {
         public override string Name { get; } = "+";

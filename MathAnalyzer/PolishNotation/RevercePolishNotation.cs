@@ -8,6 +8,7 @@ using Analyzer.Classes;
 
 namespace PolishNotation
 {
+    [Serializable]
     class RevercePolishNotation
     {
         public List<IElement> GetNotation(List<IElement> elements)
